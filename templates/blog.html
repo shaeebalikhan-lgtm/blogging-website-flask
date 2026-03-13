@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+{% block title %}
+<title> Blog Page </title>
+{% endblock title %}
+
+{% block body %}
+<h1 class='text-center'>Blog page</h1>
+<form method='POST' action='/blogpost'>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Title</label>
+  <input type="text" class="form-control" name='title' id="exampleFormControlInput1" placeholder="Title">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Author</label>
+  <input type="text" class="form-control" name='Author' id="exampleFormControlInput1" placeholder="Title">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Content</label>
+  <textarea class="form-control" name='content' id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+<input type="submit" value='POST' class="btn btn-primary">
+</form>
+{% endblock body %}
